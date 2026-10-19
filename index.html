@@ -1,180 +1,1037 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es" id="top">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Política de Privacidad - Spese</title>
-    <style>
-        :root {
-            --primary: #4F46E5;
-            --primary-light: #EEF2FF;
-            --text-main: #0F172A;
-            --text-muted: #475569;
-            --bg-page: #F8FAFC;
-            --card-bg: #FFFFFF;
-            --border-color: #E2E8F0;
-        }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Política de privacidad · Spese</title>
+<meta name="description" content="Spese guarda tus finanzas solo en tu móvil: sin cuentas, sin servidores y sin rastreo. Consulta la política de privacidad completa de la app.">
+<meta name="author" content="Spese">
+<meta name="theme-color" content="#F6F9FC" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#050A14" media="(prefers-color-scheme: dark)">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Política de privacidad · Spese">
+<meta property="og:description" content="Tus finanzas se quedan en tu móvil. Sin cuentas, sin servidores y sin rastreo.">
+<meta property="og:locale" content="es_ES">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='17' fill='%23047857'/%3E%3Ctext x='32' y='46' font-family='system-ui,sans-serif' font-size='38' font-weight='800' fill='%23fff' text-anchor='middle'%3ES%3C/text%3E%3C/svg%3E">
+<style>
+/* ==========================================================================
+   Spese · Política de privacidad
+   Paleta tomada de app/src/main/java/com/toaf/spese/ui/theme/Color.kt
+   ========================================================================== */
 
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+:root {
+  color-scheme: light dark;
 
-        body {
-            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-            background-color: var(--bg-page);
-            color: var(--text-main);
-            line-height: 1.6;
-            padding: 2rem 1rem;
-        }
+  --em-50: #ECFDF5;
+  --em-100: #D1FAE5;
+  --em-300: #6EE7B7;
+  --em-500: #10B981;
+  --em-600: #059669;
+  --em-700: #047857;
+  --em-900: #064E3B;
 
-        .container {
-            max-width: 800px;
-            margin: 0 auto;
-            background: var(--card-bg);
-            border-radius: 16px;
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
-            padding: 2.5rem;
-            border: 1px solid var(--border-color);
-        }
+  --ink: #0F172A;
+  --ink-2: #334155;
+  --muted: #475569;
+  --muted-2: #64748B;
 
-        .header {
-            text-align: center;
-            margin-bottom: 2.5rem;
-            padding-bottom: 1.5rem;
-            border-bottom: 1px solid var(--border-color);
-        }
+  --line: #E2E8F0;
+  --line-2: #EEF2F7;
 
-        .logo-badge {
-            display: inline-block;
-            background-color: var(--primary-light);
-            color: var(--primary);
-            font-weight: 700;
-            font-size: 0.875rem;
-            padding: 0.35rem 1rem;
-            border-radius: 50px;
-            margin-bottom: 1rem;
-            text-transform: uppercase;
-            letter-spacing: 0.05em;
-        }
+  --bg: #F6F9FC;
+  --bg-2: #E8F1F6;
+  --card: #FFFFFF;
+  --card-2: #FBFDFF;
 
-        h1 {
-            font-size: 2.25rem;
-            font-weight: 800;
-            color: var(--text-main);
-            margin-bottom: 0.5rem;
-        }
+  --radius: 24px;
+  --shadow: 0 1px 2px rgba(15, 23, 42, .05), 0 24px 48px -28px rgba(15, 23, 42, .28);
+  --shadow-soft: 0 1px 2px rgba(15, 23, 42, .04), 0 10px 30px -20px rgba(15, 23, 42, .22);
 
-        .last-updated {
-            font-size: 0.875rem;
-            color: var(--text-muted);
-        }
+  --btn-bg: #047857;
+  --btn-bg-hover: #059669;
+  --btn-fg: #FFFFFF;
 
-        h2 {
-            font-size: 1.25rem;
-            font-weight: 700;
-            color: var(--text-main);
-            margin-top: 2rem;
-            margin-bottom: 0.75rem;
-        }
+  --max: 860px;
+  --font: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
 
-        p {
-            color: var(--text-muted);
-            margin-bottom: 1rem;
-            font-size: 1rem;
-        }
+@media (prefers-color-scheme: dark) {
+  :root {
+    --em-50: rgba(16, 185, 129, .12);
+    --em-100: rgba(16, 185, 129, .20);
+    --em-300: #6EE7B7;
+    --em-600: #34D399;
+    --em-700: #6EE7B7;
+    --em-900: #A7F3D0;
 
-        ul {
-            margin-bottom: 1rem;
-            padding-left: 1.5rem;
-            color: var(--text-muted);
-        }
+    --ink: #E9EFF8;
+    --ink-2: #C9D5E4;
+    --muted: #A4B5CA;
+    --muted-2: #8DA1BA;
 
-        li {
-            margin-bottom: 0.5rem;
-        }
+    --line: #1E2B3F;
+    --line-2: #172235;
 
-        .highlight-box {
-            background-color: var(--primary-light);
-            border-left: 4px solid var(--primary);
-            padding: 1rem 1.25rem;
-            border-radius: 0 8px 8px 0;
-            margin: 1.5rem 0;
-        }
+    --bg: #050A14;
+    --bg-2: #08121F;
+    --card: #0C1524;
+    --card-2: #0F1A2C;
 
-        .highlight-box p {
-            color: #312E81;
-            margin-bottom: 0;
-            font-weight: 500;
-        }
+    --btn-bg: #10B981;
+    --btn-bg-hover: #34D399;
+    --btn-fg: #04241B;
 
-        .footer {
-            text-align: center;
-            margin-top: 3rem;
-            padding-top: 1.5rem;
-            border-top: 1px solid var(--border-color);
-            font-size: 0.875rem;
-            color: var(--text-muted);
-        }
+    --shadow: 0 1px 2px rgba(0, 0, 0, .55), 0 28px 60px -32px rgba(0, 0, 0, .95);
+    --shadow-soft: 0 1px 2px rgba(0, 0, 0, .45), 0 12px 28px -22px rgba(0, 0, 0, .9);
+  }
+}
 
-        @media (max-width: 640px) {
-            .container {
-                padding: 1.5rem;
-            }
-            h1 {
-                font-size: 1.75rem;
-            }
-        }
-    </style>
+*, *::before, *::after { box-sizing: border-box; }
+
+html {
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  * { transition: none !important; animation: none !important; }
+}
+
+body {
+  margin: 0;
+  font-family: var(--font);
+  font-size: 16.5px;
+  line-height: 1.72;
+  color: var(--ink-2);
+  background: var(--bg);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  background:
+    radial-gradient(900px 520px at 12% -8%, rgba(16, 185, 129, .16), transparent 60%),
+    radial-gradient(760px 520px at 92% 6%, rgba(8, 145, 178, .12), transparent 62%),
+    linear-gradient(180deg, var(--bg) 0%, var(--bg-2) 100%);
+  background-attachment: fixed;
+}
+
+@media (prefers-color-scheme: dark) {
+  body::before {
+    background:
+      radial-gradient(900px 520px at 12% -8%, rgba(16, 185, 129, .20), transparent 60%),
+      radial-gradient(760px 560px at 92% 4%, rgba(8, 145, 178, .16), transparent 62%),
+      linear-gradient(180deg, var(--bg) 0%, #03070E 100%);
+  }
+}
+
+.wrap {
+  width: min(100% - 40px, var(--max));
+  margin-inline: auto;
+}
+
+.skip {
+  position: absolute;
+  left: -9999px;
+  top: 0;
+  padding: .7rem 1.1rem;
+  background: var(--em-700);
+  color: #fff;
+  border-radius: 0 0 12px 0;
+  font-weight: 600;
+  z-index: 10;
+}
+.skip:focus { left: 0; }
+
+a {
+  color: var(--em-700);
+  text-decoration-thickness: 1.5px;
+  text-underline-offset: 3px;
+}
+a:hover { text-decoration-thickness: 2px; }
+
+:focus-visible {
+  outline: 3px solid var(--em-500);
+  outline-offset: 3px;
+  border-radius: 6px;
+}
+
+/* ------------------------------------------------------------------ hero */
+
+.hero {
+  position: relative;
+  padding: 34px 0 104px;
+  overflow: hidden;
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  inset: auto 0 0 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--line), transparent);
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 44px;
+}
+
+.brand img {
+  width: 52px;
+  height: 52px;
+  border-radius: 15px;
+  filter: drop-shadow(0 8px 16px rgba(4, 120, 87, .35));
+  box-shadow: 0 0 0 1px rgba(127, 160, 190, .22);
+}
+
+.brand-name {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.15;
+}
+
+.brand-name strong {
+  font-size: 1.18rem;
+  font-weight: 800;
+  letter-spacing: .22em;
+  color: var(--ink);
+}
+
+.brand-name span {
+  font-size: .78rem;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  color: var(--muted-2);
+  font-weight: 600;
+}
+
+.pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 7px 14px 7px 11px;
+  border-radius: 999px;
+  background: var(--em-50);
+  border: 1px solid var(--em-100);
+  color: var(--em-700);
+  font-size: .76rem;
+  font-weight: 700;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+
+.pill svg { width: 15px; height: 15px; }
+
+h1 {
+  margin: 0 0 18px;
+  font-size: clamp(2.15rem, 6vw, 3.35rem);
+  line-height: 1.06;
+  letter-spacing: -.03em;
+  font-weight: 800;
+  color: var(--ink);
+  text-wrap: balance;
+}
+
+.lede {
+  margin: 0;
+  font-size: clamp(1.03rem, 2.3vw, 1.18rem);
+  line-height: 1.62;
+  color: var(--muted);
+  max-width: 62ch;
+  text-wrap: pretty;
+}
+
+.lede strong { color: var(--ink); font-weight: 650; }
+
+.meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px 10px;
+  margin-top: 26px;
+  font-size: .82rem;
+  color: var(--muted-2);
+  font-weight: 550;
+}
+
+.meta .dot {
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: currentColor;
+  opacity: .55;
+}
+
+.meta .live {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  color: var(--em-700);
+  font-weight: 650;
+}
+
+.meta .live::before {
+  content: "";
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--em-500);
+  box-shadow: 0 0 0 4px var(--em-50);
+}
+
+/* --------------------------------------------------------------- tarjetas */
+
+.sheet {
+  position: relative;
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: clamp(24px, 4.4vw, 52px);
+  margin-top: -68px;
+  margin-bottom: 72px;
+}
+
+.stats {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
+  margin-bottom: 34px;
+}
+
+.stat {
+  padding: 18px 18px 16px;
+  border-radius: 16px;
+  background: var(--card-2);
+  border: 1px solid var(--line);
+}
+
+.stat strong {
+  display: block;
+  font-size: .95rem;
+  color: var(--em-700);
+  letter-spacing: -.01em;
+  margin-bottom: 4px;
+  font-weight: 750;
+}
+
+.stat p {
+  margin: 0;
+  font-size: .84rem;
+  line-height: 1.5;
+  color: var(--muted-2);
+}
+
+.summary {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 16px;
+  padding: 20px 22px;
+  border-radius: 18px;
+  background: linear-gradient(135deg, var(--em-50), transparent 85%);
+  border: 1px solid var(--em-100);
+  margin-bottom: 40px;
+}
+
+.summary svg {
+  width: 24px;
+  height: 24px;
+  color: var(--em-700);
+  margin-top: 2px;
+}
+
+.summary p {
+  margin: 0;
+  font-size: .97rem;
+  color: var(--ink-2);
+}
+
+.summary strong { color: var(--ink); }
+
+/* ------------------------------------------------------------------- toc */
+
+.toc {
+  margin: 0 0 44px;
+  padding: 26px 26px 22px;
+  border-radius: 18px;
+  background: var(--card-2);
+  border: 1px solid var(--line);
+}
+
+.toc h2 {
+  margin: 0 0 16px;
+  font-size: .78rem;
+  letter-spacing: .16em;
+  text-transform: uppercase;
+  color: var(--muted-2);
+  font-weight: 750;
+}
+
+.toc ol {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 2px 24px;
+}
+
+.toc a {
+  display: flex;
+  gap: 10px;
+  padding: 7px 0;
+  color: var(--ink-2);
+  text-decoration: none;
+  font-size: .93rem;
+  border-bottom: 1px solid transparent;
+  transition: color .15s ease, border-color .15s ease;
+}
+
+.toc a:hover { color: var(--em-700); border-bottom-color: var(--em-100); }
+
+.toc .n {
+  color: var(--em-700);
+  font-variant-numeric: tabular-nums;
+  font-weight: 700;
+  font-size: .82rem;
+  padding-top: 2px;
+  min-width: 1.4em;
+}
+
+/* -------------------------------------------------------------- secciones */
+
+section { padding-top: 8px; margin-bottom: 46px; scroll-margin-top: 24px; }
+section:last-of-type { margin-bottom: 8px; }
+
+h2 {
+  position: relative;
+  margin: 0 0 14px;
+  font-size: clamp(1.22rem, 2.6vw, 1.42rem);
+  line-height: 1.3;
+  letter-spacing: -.015em;
+  font-weight: 780;
+  color: var(--ink);
+  scroll-margin-top: 24px;
+  text-wrap: balance;
+}
+
+h2 .n {
+  color: var(--em-600);
+  font-variant-numeric: tabular-nums;
+  font-size: .82em;
+  font-weight: 750;
+  margin-right: 10px;
+  letter-spacing: .02em;
+}
+
+h3 {
+  margin: 26px 0 8px;
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--ink);
+  letter-spacing: -.005em;
+}
+
+p { margin: 0 0 14px; color: var(--muted); }
+p:last-child { margin-bottom: 0; }
+
+section > p > strong, section li strong { color: var(--ink); font-weight: 650; }
+
+ul { margin: 0 0 14px; padding-left: 1.15rem; }
+li { margin-bottom: 8px; color: var(--muted); }
+li::marker { color: var(--em-600); }
+
+.list-no { list-style: none; padding-left: 0; }
+
+.list-no li {
+  position: relative;
+  padding-left: 30px;
+}
+
+.list-no li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: .52em;
+  width: 16px;
+  height: 16px;
+  border-radius: 999px;
+  background: var(--em-50);
+  box-shadow: inset 0 0 0 1.5px var(--em-100);
+}
+
+.list-no li::after {
+  content: "";
+  position: absolute;
+  left: 5px;
+  top: calc(.52em + 5px);
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--em-600);
+}
+
+.table-wrap {
+  margin: 4px 0 16px;
+  overflow-x: auto;
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  -webkit-overflow-scrolling: touch;
+}
+
+table {
+  width: 100%;
+  min-width: 520px;
+  border-collapse: collapse;
+  font-size: .91rem;
+}
+
+thead th {
+  text-align: left;
+  padding: 13px 16px;
+  font-size: .72rem;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  color: var(--muted-2);
+  font-weight: 750;
+  background: var(--card-2);
+  border-bottom: 1px solid var(--line);
+  white-space: nowrap;
+}
+
+tbody td {
+  padding: 13px 16px;
+  border-bottom: 1px solid var(--line-2);
+  color: var(--muted);
+  vertical-align: top;
+}
+
+tbody tr:last-child td { border-bottom: 0; }
+tbody td:first-child { color: var(--ink); font-weight: 620; width: 38%; }
+
+.note {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 12px;
+  padding: 16px 18px;
+  margin: 18px 0;
+  border-radius: 14px;
+  border: 1px solid var(--line);
+  background: var(--card-2);
+  font-size: .93rem;
+}
+
+.note svg { width: 19px; height: 19px; margin-top: 2px; color: var(--muted-2); flex: none; }
+.note p { margin: 0; color: var(--muted); }
+.note strong { color: var(--ink); }
+
+.note--key {
+  background: var(--em-50);
+  border-color: var(--em-100);
+}
+.note--key svg { color: var(--em-700); }
+
+.anchor {
+  opacity: 0;
+  margin-left: 8px;
+  font-size: .8em;
+  color: var(--muted-2);
+  text-decoration: none;
+  font-weight: 500;
+  transition: opacity .15s ease;
+}
+h2:hover .anchor, .anchor:focus-visible { opacity: 1; }
+
+.contact-card {
+  margin-top: 6px;
+  padding: 22px;
+  border-radius: 16px;
+  background: var(--card-2);
+  border: 1px solid var(--line);
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+}
+
+.contact-card .label {
+  display: block;
+  font-size: .74rem;
+  letter-spacing: .13em;
+  text-transform: uppercase;
+  color: var(--muted-2);
+  font-weight: 750;
+  margin-bottom: 3px;
+}
+
+.mail {
+  font-size: 1.02rem;
+  font-weight: 650;
+  word-break: break-word;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 11px 18px;
+  border-radius: 999px;
+  background: var(--btn-bg);
+  color: var(--btn-fg);
+  text-decoration: none;
+  font-weight: 650;
+  font-size: .92rem;
+  box-shadow: 0 10px 20px -12px rgba(4, 120, 87, .9);
+  transition: transform .15s ease, box-shadow .15s ease, background .15s ease;
+}
+
+.btn:hover { background: var(--btn-bg-hover); transform: translateY(-1px); }
+.btn svg { width: 16px; height: 16px; }
+
+/* ----------------------------------------------------------------- footer */
+
+.footer {
+  width: min(100% - 40px, var(--max));
+  margin: 0 auto;
+  padding: 28px 0 56px;
+  border-top: 1px solid var(--line);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px 18px;
+  align-items: center;
+  justify-content: space-between;
+  font-size: .84rem;
+  color: var(--muted-2);
+}
+
+.footer strong { color: var(--ink-2); font-weight: 650; }
+.footer nav { display: flex; gap: 18px; }
+.footer a { color: var(--muted-2); }
+.footer a:hover { color: var(--em-700); }
+
+/* tabla como tarjetas en pantallas pequenas */
+@media (max-width: 560px) {
+  .table-wrap { border: 0; overflow: visible; }
+  table { min-width: 0; display: block; font-size: .92rem; }
+  thead { display: none; }
+  tbody { display: block; }
+  tbody tr {
+    display: block;
+    padding: 15px 17px;
+    margin-bottom: 10px;
+    border: 1px solid var(--line);
+    border-radius: 15px;
+    background: var(--card-2);
+  }
+  tbody tr:last-child { margin-bottom: 0; }
+  tbody td { display: block; border: 0; padding: 0; width: auto; }
+  tbody td:first-child { width: auto; margin-bottom: 9px; font-size: 1rem; }
+  tbody td + td { margin-top: 7px; }
+  tbody td[data-label]::before {
+    content: attr(data-label);
+    display: block;
+    margin-bottom: 2px;
+    font-size: .68rem;
+    letter-spacing: .12em;
+    text-transform: uppercase;
+    font-weight: 750;
+    color: var(--muted-2);
+  }
+}
+
+/* -------------------------------------------------------------- responsive */
+
+@media (max-width: 720px) {
+  .stats { grid-template-columns: 1fr; gap: 10px; }
+  .stat { display: grid; grid-template-columns: auto 1fr; gap: 10px; align-items: baseline; padding: 14px 16px; }
+  .stat strong { margin: 0; }
+  .stat p { font-size: .86rem; }
+  .toc ol { grid-template-columns: 1fr; }
+  .sheet { margin-top: -56px; }
+  .hero { padding-bottom: 88px; }
+  .brand { margin-bottom: 34px; }
+  .summary { grid-template-columns: 1fr; gap: 10px; }
+  .contact-card { flex-direction: column; align-items: flex-start; }
+  .btn { width: 100%; justify-content: center; }
+  .footer { flex-direction: column; align-items: flex-start; }
+}
+
+/* ------------------------------------------------------------------ print */
+
+@media print {
+  body { background: #fff; color: #111; font-size: 11pt; }
+  body::before, .toc, .stats, .skip, .btn, .footer nav { display: none !important; }
+  .hero { padding: 0 0 18pt; }
+  .sheet { box-shadow: none; border: 0; margin: 0; padding: 0; }
+  h1, h2, h3, strong { color: #000; }
+  a { color: #000; text-decoration: none; }
+  section { break-inside: avoid-page; }
+  .anchor { display: none; }
+}
+</style>
 </head>
 <body>
 
-    <div class="container">
-        <div class="header">
-            <span class="logo-badge">Spese App</span>
-            <h1>Política de Privacidad</h1>
-            <p class="last-updated">Última actualización: Mayo de 2024</p>
-        </div>
+<a class="skip" href="#contenido">Saltar al contenido</a>
 
-        <div class="highlight-box">
-            <p><strong>Resumen clave:</strong> Spese es una aplicación orientada a la privacidad. Todos tus datos financieros se almacenan de manera local en tu dispositivo. No recopilamos, vendemos ni transmitimos tus datos personales a servidores externos.</p>
-        </div>
-
-        <h2>1. Información que recopilamos</h2>
-        <p>Spese está diseñada para funcionar sin necesidad de crear una cuenta de usuario ni iniciar sesión en servidores remotos.</p>
-        <ul>
-            <li><strong>Datos financieros locales:</strong> Los registros de gastos, ingresos, presupuestos, categorías y préstamos que introduces en la aplicación se guardan exclusivamente en la base de datos local de tu dispositivo.</li>
-            <li><strong>Copias de seguridad:</strong> Si decides exportar o realizar una copia de seguridad de tus datos, dichos archivos se generan y almacenan en el almacenamiento local que tú elijas o decidas compartir bajo tu propia responsabilidad.</li>
-        </ul>
-
-        <h2>2. Uso de la información</h2>
-        <p>Dado que la información financiera permanece en tu dispositivo:</p>
-        <ul>
-            <li>No utilizamos tus datos para elaboración de perfiles, publicidad dirigida ni análisis externos.</li>
-            <li>La información solo se procesa localmente para mostrarte gráficos, estadísticas y el estado de tus finanzas personales dentro de la app.</li>
-        </ul>
-
-        <h2>3. Permisos de la aplicación</h2>
-        <p>Spese solicita únicamente los permisos estrictamente necesarios para su funcionamiento:</p>
-        <ul>
-            <li><strong>Almacenamiento / Archivos:</strong> Utilizado opcionalmente para guardar o restaurar copias de seguridad de tus finanzas.</li>
-        </ul>
-
-        <h2>4. Seguridad</h2>
-        <p>Nos tomamos muy en serio la seguridad de tu información. Al almacenarse todo de forma local en tu dispositivo, la seguridad de tus datos depende también de las medidas de protección generales de tu teléfono (como bloqueo por PIN, huella dactilar o reconocimiento facial).</p>
-
-        <h2>5. Cambios en esta política de privacidad</h2>
-        <p>Podemos actualizar nuestra Política de Privacidad ocasionalmente. Te recomendamos revisar esta página periódicamente para cualquier cambio. Los cambios entran en vigor inmediatamente después de su publicación en esta página.</p>
-
-        <h2>6. Contacto</h2>
-        <p>Si tienes alguna pregunta o sugerencia sobre nuestra Política de Privacidad, no dudes en contactarnos en:</p>
-        <p><strong>Correo electrónico:</strong> soporte@tuemail.com</p>
-
-        <div class="footer">
-            <p>&copy; 2026 Spese. Todos los derechos reservados.</p>
-        </div>
+<header class="hero">
+  <div class="wrap">
+    <div class="brand">
+      <img src="data:image/png;base64,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" width="52" height="52" alt="">
+      <div class="brand-name">
+        <strong>SPESE</strong>
+        <span>Finanzas personales</span>
+      </div>
     </div>
+
+    <span class="pill">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="10" width="16" height="11" rx="2.5"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg>
+      Privacidad
+    </span>
+
+    <h1>Política de privacidad</h1>
+
+    <p class="lede">
+      Spese es una app de finanzas personales que funciona <strong>sin conexión</strong>: tus
+      movimientos, presupuestos y préstamos viven en tu teléfono y en ningún otro sitio.
+    </p>
+
+    <p class="meta">
+      <span class="live">Vigente</span>
+      <span class="dot" aria-hidden="true"></span>
+      <span>Última actualización: <time datetime="2026-10-19">19 de octubre de 2026</time></span>
+      <span class="dot" aria-hidden="true"></span>
+      <span>Versión 2.0</span>
+      <span class="dot" aria-hidden="true"></span>
+      <span>Spese para Android</span>
+    </p>
+  </div>
+</header>
+
+<main class="wrap" id="contenido">
+  <article class="sheet">
+
+    <div class="stats">
+      <div class="stat">
+        <strong>Todo local</strong>
+        <p>Tus datos se guardan en el almacenamiento privado de la app, en tu dispositivo.</p>
+      </div>
+      <div class="stat">
+        <strong>Sin cuenta</strong>
+        <p>No hay registro, ni correo, ni inicio de sesión de ningún tipo.</p>
+      </div>
+      <div class="stat">
+        <strong>Sin internet</strong>
+        <p>La app no declara el permiso de red: no puede enviar datos a ningún servidor.</p>
+      </div>
+    </div>
+
+    <div class="summary">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l7 3v6c0 4.3-2.9 7.6-7 9-4.1-1.4-7-4.7-7-9V6l7-3z"/><path d="M9 12l2 2 4-4"/></svg>
+      <p>
+        <strong>En una frase:</strong> Spese no recopila, no vende ni comparte tus datos personales.
+        Todo lo que anotas se queda en tu teléfono y, si haces una copia de seguridad, en el archivo
+        que tú elijas.
+      </p>
+    </div>
+
+    <nav class="toc" aria-labelledby="toc-title">
+      <h2 id="toc-title">En esta página</h2>
+      <ol>
+        <li><a href="#s1"><span class="n">01</span> Responsable del tratamiento</a></li>
+        <li><a href="#s2"><span class="n">02</span> Resumen de un vistazo</a></li>
+        <li><a href="#s3"><span class="n">03</span> Qué datos trata la app</a></li>
+        <li><a href="#s4"><span class="n">04</span> Datos que no recogemos</a></li>
+        <li><a href="#s5"><span class="n">05</span> Permisos y acceso al sistema</a></li>
+        <li><a href="#s6"><span class="n">06</span> Copias de seguridad e informes</a></li>
+        <li><a href="#s7"><span class="n">07</span> Copia automática de Android</a></li>
+        <li><a href="#s8"><span class="n">08</span> Seguridad</a></li>
+        <li><a href="#s9"><span class="n">09</span> Conservación y eliminación</a></li>
+        <li><a href="#s10"><span class="n">10</span> Tus derechos</a></li>
+        <li><a href="#s11"><span class="n">11</span> Menores de edad</a></li>
+        <li><a href="#s12"><span class="n">12</span> Cambios en esta política</a></li>
+        <li><a href="#s13"><span class="n">13</span> Seguridad de los datos en Google Play</a></li>
+        <li><a href="#s14"><span class="n">14</span> Contacto</a></li>
+      </ol>
+    </nav>
+
+    <section aria-labelledby="s1">
+      <h2 id="s1"><span class="n">01</span> Responsable del tratamiento<a class="anchor" href="#s1" aria-label="Enlace a la sección 1">#</a></h2>
+      <p>
+        Spese es una aplicación para Android desarrollada de forma independiente. El responsable del
+        tratamiento de los datos que describes en la app es el desarrollador de Spese, que puedes
+        contactar en <a href="mailto:spese.soporte@gmail.com">spese.soporte@gmail.com</a>.
+      </p>
+      <p>
+        Esta política explica qué información maneja la aplicación, dónde se guarda y qué control
+        tienes sobre ella. Se aplica a la app Spese para Android y a esta misma página web.
+      </p>
+    </section>
+
+    <section aria-labelledby="s2">
+      <h2 id="s2"><span class="n">02</span> Resumen de un vistazo<a class="anchor" href="#s2" aria-label="Enlace a la sección 2">#</a></h2>
+      <ul>
+        <li>No creamos cuentas de usuario ni pedimos nombre, correo o teléfono para usar la app.</li>
+        <li>Tus registros financieros se guardan en una base de datos privada de la app, en tu dispositivo.</li>
+        <li>No hay servidores propios ni de terceros que reciban tus datos.</li>
+        <li>No usamos analítica, publicidad, informes de fallos ni rastreadores de ningún tipo.</li>
+        <li>Solo sale información de tu teléfono si tú lo decides: una copia de seguridad, un informe CSV o PDF, o la copia automática que gestiona Android.</li>
+      </ul>
+    </section>
+
+    <section aria-labelledby="s3">
+      <h2 id="s3"><span class="n">03</span> Qué datos trata la app y dónde se guardan<a class="anchor" href="#s3" aria-label="Enlace a la sección 3">#</a></h2>
+      <p>
+        Todos los datos que introduces se almacenan en el <strong>almacenamiento privado de la
+        aplicación</strong>: la zona que Android reserva a Spese y que otras apps no pueden leer en un
+        dispositivo sin root. Se elimina al desinstalar la aplicación.
+      </p>
+
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th scope="col">Dato</th>
+              <th scope="col">Dónde se guarda</th>
+              <th scope="col">Para qué</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Movimientos, categorías, presupuestos y préstamos</td>
+              <td data-label="Dónde se guarda">Base de datos local (Room), en el almacenamiento privado de la app</td>
+              <td data-label="Para qué">Mostrar tu historial, análisis, presupuestos y avisos de vencimiento</td>
+            </tr>
+            <tr>
+              <td>Ajustes: tema, color de acento, moneda y límite mensual</td>
+              <td data-label="Dónde se guarda">Preferencias locales del dispositivo</td>
+              <td data-label="Para qué">Recordar cómo quieres ver la app</td>
+            </tr>
+            <tr>
+              <td>Copias de seguridad</td>
+              <td data-label="Dónde se guarda">El archivo o la carpeta que elijas al crearlas</td>
+              <td data-label="Para qué">Restaurar tus datos más adelante o en otro dispositivo</td>
+            </tr>
+            <tr>
+              <td>Informes en CSV y PDF</td>
+              <td data-label="Dónde se guarda">La carpeta o la app que elijas al guardarlos o compartirlos</td>
+              <td data-label="Para qué">Consultarlos en Excel, imprimirlos o compartirlos</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="note note--key">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 8h.01M11 12h1v4h1"/></svg>
+        <p>
+          Spese <strong>no envía nada a internet</strong>: ni los datos que anotas, ni estadísticas de
+          uso, ni identificadores del dispositivo. La aplicación no incluye ningún servicio de
+          publicidad, analítica o seguimiento.
+        </p>
+      </div>
+    </section>
+
+    <section aria-labelledby="s4">
+      <h2 id="s4"><span class="n">04</span> Datos que no recogemos<a class="anchor" href="#s4" aria-label="Enlace a la sección 4">#</a></h2>
+      <p>Para que no haya dudas, Spese no recoge ni solicita:</p>
+      <ul class="list-no">
+        <li>Nombre, correo electrónico, teléfono ni ningún otro dato identificativo.</li>
+        <li>Ubicación, contactos, cámara, micrófono ni historial de llamadas.</li>
+        <li>Identificadores de publicidad o de seguimiento entre aplicaciones.</li>
+        <li>Estadísticas de uso, datos de rendimiento o informes de fallos.</li>
+        <li>Archivos, fotografías o mensajes ajenos a la propia aplicación.</li>
+        <li>Datos financieros enviados a servidores: la app no dispone de servidores.</li>
+      </ul>
+    </section>
+
+    <section aria-labelledby="s5">
+      <h2 id="s5"><span class="n">05</span> Permisos y acceso al sistema<a class="anchor" href="#s5" aria-label="Enlace a la sección 5">#</a></h2>
+      <p>
+        Spese <strong>no solicita ningún permiso peligroso</strong>: ni almacenamiento, ni ubicación,
+        ni contactos, ni cámara, ni acceso a internet. Para guardar o abrir archivos utiliza los
+        mecanismos del propio sistema operativo:
+      </p>
+      <ul>
+        <li>
+          <strong>Selector de archivos de Android.</strong> Cuando creas o restauras una copia de
+          seguridad, o guardas un informe, es Android quien te muestra su selector. Spese solo accede
+          al archivo concreto que tú eliges, nunca al resto de tu memoria.
+        </li>
+        <li>
+          <strong>Compartir informes.</strong> Si decides compartir un CSV o un PDF, la app lo expone
+          temporalmente, y solo a la aplicación que tú selecciones (correo, Drive, mensajería…), a
+          través del mecanismo <em>FileProvider</em> de Android.
+        </li>
+      </ul>
+      <div class="note">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 8h.01M11 12h1v4h1"/></svg>
+        <p>
+          Puedes comprobarlo tú mismo en <strong>Ajustes → Aplicaciones → Spese → Permisos</strong>.
+          La ficha de Google Play muestra la lista de permisos que declara la aplicación.
+        </p>
+      </div>
+    </section>
+
+    <section aria-labelledby="s6">
+      <h2 id="s6"><span class="n">06</span> Copias de seguridad e informes<a class="anchor" href="#s6" aria-label="Enlace a la sección 6">#</a></h2>
+      <p>
+        La copia de seguridad y los informes son funciones <strong>opcionales</strong> y siempre las
+        inicias tú. Al crearlas, eliges dónde se guardan; a partir de ese momento el archivo queda
+        fuera de la app y le afectan las condiciones del servicio que hayas usado (tu almacenamiento,
+        tu nube, tu correo…).
+      </p>
+      <ul>
+        <li><strong>Copia de seguridad:</strong> genera un archivo con todos tus datos. Antes de restaurarlo, la app valida su contenido y conserva tu información actual por si algo falla.</li>
+        <li><strong>Informes:</strong> exportan a CSV (compatible con Excel) o a PDF lo que tú elijas del periodo consultado.</li>
+      </ul>
+      <div class="note">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 4v10m0 0l-3.5-3.5M12 14l3.5-3.5"/><path d="M5 17v1.5A1.5 1.5 0 0 0 6.5 20h11a1.5 1.5 0 0 0 1.5-1.5V17"/></svg>
+        <p>
+          <strong>Cuídalas.</strong> Una copia de seguridad contiene toda tu información financiera.
+          Guárdala en un lugar seguro y no la compartas con nadie en quien no confíes.
+        </p>
+      </div>
+    </section>
+
+    <section aria-labelledby="s7">
+      <h2 id="s7"><span class="n">07</span> Copia de seguridad automática de Android<a class="anchor" href="#s7" aria-label="Enlace a la sección 7">#</a></h2>
+      <p>
+        Para no prometerte más de lo que depende de la app: Spese permite que el sistema operativo
+        incluya sus datos en la <strong>copia automática de Android</strong>. Si tu teléfono tiene
+        activada esa copia y has iniciado sesión con una cuenta de Google, Android puede subir la base
+        de datos de Spese a tu propio espacio de Google Drive.
+      </p>
+      <ul>
+        <li>Esa copia la gestiona el sistema operativo y tu cuenta de Google, no Spese, y solo tú puedes verla.</li>
+        <li>Ni la app ni el desarrollador tienen acceso a ese contenido.</li>
+        <li>Puedes desactivarla en <strong>Ajustes → Google → Copia de seguridad</strong>, o desactivar la copia solo para Spese desde los ajustes de aplicaciones del sistema.</li>
+      </ul>
+    </section>
+
+    <section aria-labelledby="s8">
+      <h2 id="s8"><span class="n">08</span> Seguridad<a class="anchor" href="#s8" aria-label="Enlace a la sección 8">#</a></h2>
+      <p>
+        Como no hay servidores, tu información no corre el riesgo de una brecha en un servicio en la
+        nube. La protección depende del aislamiento que ofrece Android y de las medidas de seguridad de
+        tu propio dispositivo:
+      </p>
+      <ul>
+        <li>Los datos viven en el almacenamiento privado de la app, separado del resto de aplicaciones.</li>
+        <li>Android cifra el almacenamiento del dispositivo; Spese se apoya en ese cifrado y no aplica un cifrado propio adicional a la base de datos.</li>
+        <li>El bloqueo de pantalla (PIN, patrón, huella o rostro) es tu primera barrera: es muy recomendable mantenerlo activo.</li>
+      </ul>
+    </section>
+
+    <section aria-labelledby="s9">
+      <h2 id="s9"><span class="n">09</span> Conservación y eliminación<a class="anchor" href="#s9" aria-label="Enlace a la sección 9">#</a></h2>
+      <p>
+        Conservamos tus datos mientras existan en tu dispositivo. No hay plazos ocultos ni copias en
+        nuestro poder. Tú decides cuándo desaparecen:
+      </p>
+      <ul>
+        <li><strong>Borrar todos los datos.</strong> En <strong>Ajustes → Zona peligrosa</strong> puedes eliminar de una vez movimientos, categorías, presupuestos y préstamos. La acción es inmediata e irreversible.</li>
+        <li><strong>Desinstalar la app.</strong> Al desinstalar Spese, Android borra su almacenamiento privado.</li>
+        <li><strong>Archivos que hayas exportado.</strong> Las copias de seguridad e informes guardados fuera de la app no se eliminan al desinstalarla: tendrás que borrarlos tú desde donde los guardaste.</li>
+      </ul>
+    </section>
+
+    <section aria-labelledby="s10">
+      <h2 id="s10"><span class="n">10</span> Tus derechos<a class="anchor" href="#s10" aria-label="Enlace a la sección 10">#</a></h2>
+      <p>
+        Tus datos están en tus manos, así que puedes ejercer tus derechos directamente en la
+        aplicación, sin intermediarios y sin esperas:
+      </p>
+      <ul>
+        <li><strong>Acceso y portabilidad:</strong> exporta una copia de seguridad o un informe CSV con toda tu información.</li>
+        <li><strong>Rectificación:</strong> edita o elimina cualquier movimiento desde la propia app.</li>
+        <li><strong>Supresión:</strong> usa «Borrar todos los datos» o desinstala la aplicación.</li>
+        <li><strong>Oposición y limitación:</strong> no hay tratamiento por nuestra parte que puedas limitar; la app no elabora perfiles ni toma decisiones automatizadas sobre ti.</li>
+      </ul>
+      <p>
+        Si tu legislación te reconoce derechos adicionales (por ejemplo, el RGPD en la Unión Europea),
+        puedes ejercerlos igualmente. Como no tenemos acceso a tus datos, en la mayoría de los casos
+        bastará con lo anterior; si necesitas ayuda, escríbenos y te orientamos.
+      </p>
+    </section>
+
+    <section aria-labelledby="s11">
+      <h2 id="s11"><span class="n">11</span> Menores de edad<a class="anchor" href="#s11" aria-label="Enlace a la sección 11">#</a></h2>
+      <p>
+        Spese no está dirigida a menores de 13 años y no recoge datos de ninguna persona, tampoco de
+        menores. Si eres madre, padre o tutor y crees que un menor nos ha facilitado información,
+        escríbenos: aunque no disponemos de datos suyos, te ayudaremos a revisar la situación.
+      </p>
+    </section>
+
+    <section aria-labelledby="s12">
+      <h2 id="s12"><span class="n">12</span> Cambios en esta política<a class="anchor" href="#s12" aria-label="Enlace a la sección 12">#</a></h2>
+      <p>
+        Si la app incorpora alguna función que afecte a la privacidad, actualizaremos esta página y la
+        fecha de «última actualización» que aparece arriba. Los cambios entran en vigor en cuanto se
+        publican aquí.
+      </p>
+      <p>
+        Cuando el cambio sea importante, lo anunciaremos también en la ficha de Google Play y en las
+        notas de la versión correspondiente.
+      </p>
+    </section>
+
+    <section aria-labelledby="s13">
+      <h2 id="s13"><span class="n">13</span> Seguridad de los datos en Google Play<a class="anchor" href="#s13" aria-label="Enlace a la sección 13">#</a></h2>
+      <p>
+        Esta política es coherente con la sección <strong>«Seguridad de los datos»</strong> de la ficha
+        de Spese en Google Play, donde se declara:
+      </p>
+      <ul>
+        <li>No se recogen datos del usuario.</li>
+        <li>No se comparten datos con terceros.</li>
+        <li>No se utiliza la publicidad ni la analítica de terceros.</li>
+        <li>El usuario puede eliminar sus datos en cualquier momento desde la app o desinstalándola.</li>
+      </ul>
+    </section>
+
+    <section aria-labelledby="s14">
+      <h2 id="s14"><span class="n">14</span> Contacto<a class="anchor" href="#s14" aria-label="Enlace a la sección 14">#</a></h2>
+      <p>
+        Si tienes cualquier duda sobre esta política, sobre cómo se guardan tus datos o quieres
+        proponer una mejora, escríbenos. Respondemos en un plazo razonable.
+      </p>
+
+      <div class="contact-card">
+        <div>
+          <span class="label">Correo de contacto</span>
+          <a class="mail" href="mailto:spese.soporte@gmail.com">spese.soporte@gmail.com</a>
+        </div>
+        <a class="btn" href="mailto:spese.soporte@gmail.com?subject=Privacidad%20en%20Spese">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2.5"/><path d="M3.5 7l8.5 6 8.5-6"/></svg>
+          Escribir un correo
+        </a>
+      </div>
+    </section>
+
+  </article>
+</main>
+
+<footer class="footer">
+  <p style="margin:0">
+    © 2026 <strong>Spese</strong>. Todos los derechos reservados.
+  </p>
+  <nav aria-label="Enlaces del pie de página">
+    <a href="#s3">Qué datos trata la app</a>
+    <a href="#s9">Eliminar tus datos</a>
+    <a href="#top">Volver arriba ↑</a>
+  </nav>
+</footer>
 
 </body>
 </html>
